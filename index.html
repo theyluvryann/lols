@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 Months With You 💕</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      color: white;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #4b1238, #09010a 75%);
+    }
+
+    .page {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 28px;
+      animation: fade 1s ease;
+    }
+
+    .page.active { display: flex; }
+
+    .card {
+      max-width: 650px;
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 35px rgba(255, 105, 180, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      text-shadow: 0 0 18px #ff77c8;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #ffe6f4;
+    }
+
+    button {
+      margin-top: 26px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 40px;
+      background: #ff5faf;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 0 25px #ff5faf;
+      cursor: pointer;
+      animation: pulse 1.8s infinite;
+    }
+
+    .heart {
+      font-size: 4.5rem;
+      margin-bottom: 18px;
+      animation: beat 1.4s infinite;
+    }
+
+    .small {
+      margin-top: 14px;
+      font-size: .85rem;
+      opacity: .8;
+    }
+
+    .polaroids {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .polaroid {
+      width: 120px;
+      height: 145px;
+      background: white;
+      color: #551139;
+      border-radius: 8px;
+      padding: 10px;
+      transform: rotate(-4deg);
+      box-shadow: 0 8px 25px rgba(0,0,0,.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: .9rem;
+    }
+
+    .polaroid:nth-child(2) { transform: rotate(5deg); }
+    .polaroid:nth-child(3) { transform: rotate(-2deg); }
+
+    .particle {
+      position: fixed;
+      top: -20px;
+      pointer-events: none;
+      animation: fall linear forwards;
+      z-index: 0;
+    }
+
+    .music {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+      font-size: .8rem;
+      padding: 10px 14px;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: scale(.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      50% { transform: scale(1.07); }
+    }
+
+    @keyframes beat {
+      25% { transform: scale(1.18); }
+      50% { transform: scale(.95); }
+      75% { transform: scale(1.1); }
+    }
+
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 1.65rem; }
+      p { font-size: .98rem; }
+      .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="music" onclick="toggleMusic()">music 🎵</button>
+<audio id="song" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="page active">
+  <div class="card">
+    <div class="heart">💕</div>
+    <h1>for my cariño 💕</h1>
+    <p>
+      i made you something small… but it comes from a very big place in my heart.
+      <br><br>
+      so just tap through this slowly, okay?
+    </p>
+    <button onclick="nextPage()">open it fr</button>
+    <div class="small">from your chaotic man 😭</div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>3 months with you 💕</h1>
+    <p>
+      time really went by so fast.
+      <br><br>
+      one moment we were just two people getting to know each other…
+      and now you’re someone i think about all the time.
+      <br><br>
+      my cariño. my peace. my wifey 💕💍
+    </p>
+    <button onclick="nextPage()">next</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>how it started</h1>
+    <p>
+      it still feels crazy how one random moment changed everything.
+      <br><br>
+      i joined a tiktok live for editing stuff, stayed for a bit, then it ended.
+      i scrolled down…
+      <br><br>
+      and boom.
+      <br><br>
+      there you were.
+    </p>
+    <button onclick="nextPage()">nah this part 😭</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>then you became my light</h1>
+    <p>
+      so quickly, you became the person i kept checking my phone for.
+      <br><br>
+      your texts made me smile like an idiot.
+      your voice became comfort.
+      your smile became peace.
+      <br><br>
+      and somehow… you became part of my everyday life.
+    </p>
+    <button onclick="nextPage()">keep going 💕</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>the little things</h1>
+    <p>
+      it’s the calls.
+      <br>
+      the laughs.
+      <br>
+      the random moments.
+      <br>
+      the way i miss you even after we just spoke.
+      <br>
+      the way music makes me think about you at night.
+      <br><br>
+      it’s all of it.
+    </p>
+    <button onclick="nextPage()">fr</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>our little memories</h1>
+    <p>some moments live in my head rent free fr 😭</p>
+    <div class="polaroids">
+      <div class="polaroid">your smile</div>
+      <div class="polaroid">our calls</div>
+      <div class="polaroid">late nights</div>
+    </div>
+    <button onclick="nextPage()">next 💕</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <h1>what you mean to me</h1>
+    <p>
+      you’re not just someone i love.
+      <br><br>
+      you’re someone i’m grateful for.
+      someone i’m proud to have.
+      someone who makes my heart feel full.
+      <br><br>
+      i’m really glad it’s you.
+    </p>
+    <button onclick="nextPage()">almost done</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <div class="heart">💖</div>
+    <h1>happy 3 months, wifey 💕💍</h1>
+    <p>
+      thank you for being my favorite person.
+      <br><br>
+      thank you for giving me memories i never want to forget.
+      <br><br>
+      i love you so much, cariño 💕
+    </p>
+    <button onclick="nextPage()">final surprise</button>
+  </div>
+</section>
+
+<section class="page">
+  <div class="card">
+    <div class="heart">💞</div>
+    <h1>this is only the beginning</h1>
+    <p>
+      3 months down…
+      <br><br>
+      and hopefully so many more memories still waiting for us.
+      <br><br>
+      i’m so grateful i found you.
+    </p>
+  </div>
+</section>
+
+<script>
+  let current = 0;
+  const pages = document.querySelectorAll(".page");
+  const song = document.getElementById("song");
+
+  function nextPage() {
+    pages[current].classList.remove("active");
+    current++;
+    pages[current].classList.add("active");
+
+    if (current === pages.length - 1) {
+      bigBurst();
+    }
+  }
+
+  function toggleMusic() {
+    if (song.paused) song.play();
+    else song.pause();
+  }
+
+  function heartFall() {
+    const h = document.createElement("div");
+    h.className = "particle";
+    h.innerHTML = Math.random() > 0.5 ? "💕" : "💖";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = Math.random() * 18 + 14 + "px";
+    h.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 6500);
+  }
+
+  function bigBurst() {
+    for (let i = 0; i < 130; i++) {
+      setTimeout(heartFall, i * 25);
+    }
+  }
+
+  setInterval(heartFall, 700);
+</script>
+
+</body>
+</html>
